@@ -11,12 +11,7 @@ This application is made with Node.js, Express, Socket.io and MongoDB.
 ## Customize the installation :
 
 	- You can change the app port in config file.
-
-
-## How to use :
-
-	- You can change the app port in config file.
-  
+ 
   
 ## How to use :
 
