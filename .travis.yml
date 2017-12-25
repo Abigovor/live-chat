@@ -2,8 +2,10 @@ language: node_js
 node_js:
   - "iojs"
   - "8"
-  before_script:
+before_script:
   - npm install
-  cache:
+cache:
   directories:
     - "node_modules"
+script:
+  - npm test
