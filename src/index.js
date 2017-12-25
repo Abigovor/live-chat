@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 
-const User = require('./models/User');
+const modules = require('./modules');
 const db_conf = require('../config').database.mongo;
 
 app.use(bodyParser.json());
@@ -13,33 +13,11 @@ app
 .get('/', function(req, res) {
   res.send('Welcome');  
 })
-.get('/users', function(req, res) {
-	User.find({}, (err, users) => {
-		if(err) return res.sendStatus(500);
-		else res.send(users);
-	})
-})
-.get('/user', function(req, res) {
+.get('/users', modules.controllers.users.all)
+.post('/user', modules.controllers.users.create)
 
-    let name = req.body.name;
-    let username = req.body.username;
-    let password = req.body.password;
-
-	// create a new user called chris
-	var user = new User({
-	  name: name || 'Chris',
-	  username: username || 'sevilayha',
-	  password: password || 'password' 
-	});
-
-	user.save(function(err) {
-  		if (err) return res.sendStatus(500);
-
-  		console.log('User saved successfully!');
-  		res.sendStatus(200);
-	})
-
-})
+.get('/messages', modules.controllers.messages.all)
+.post('/message', modules.controllers.messages.create)
 
 
 const mongoose = require('mongoose');

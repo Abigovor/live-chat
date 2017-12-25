@@ -15,6 +15,6 @@ const userSchema = new Schema({
   updated_at: Date
 });
 
-var User = mongoose.model("Model", userSchema, "user");
+var User = mongoose.model("User", userSchema);
 
 module.exports = User;
