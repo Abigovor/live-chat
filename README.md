@@ -3,6 +3,9 @@ Node.js live-chat
 
 This application is made with Node.js, Express, Socket.io and MongoDB.
 
+[![Build Status](https://travis-ci.org/Abigovor/live-chat.svg?branch=master)](https://travis-ci.org/Abigovor/live-chat)
+
+
 ## Install the modules :
 
 	- Go to the live-chat directory and use this command
