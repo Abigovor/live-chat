@@ -3,7 +3,7 @@ mongoose.Promise = global.Promise;
 
 const db_conf = require('../config').database.mongo;
 
-let mongoUrl = `${db_conf.protocol}://sdad:${encodeURIComponent(db_conf.password)}@${db_conf.host}`;
+let mongoUrl = `${db_conf.protocol}://${db_conf.user}:${encodeURIComponent(db_conf.password)}@${db_conf.host}`;
 
 function connect () {
 	return new Promise ( (resolve,reject) => {
