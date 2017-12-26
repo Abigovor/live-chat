@@ -37,3 +37,6 @@ mongoose.connect(mongoUrl, { useMongoClient: true })
 .catch(err => {
 	console.log('filed connect to db', err);
 })
+
+// for testing
+module.exports = app;
