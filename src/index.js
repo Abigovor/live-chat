@@ -5,6 +5,8 @@ const app = express();
 const modules = require('./modules');
 const db = require('./db');
 
+const PORT = process.env.PORT || 3000;
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -22,7 +24,7 @@ app
 
 db.connect()
 .then(() => {
-    app.listen(3000, function () {
+    app.listen(PORT, function () {
       console.log('server started');
     });
 });
