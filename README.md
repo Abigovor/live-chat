@@ -5,7 +5,7 @@ This application is made with Node.js, Express, Socket.io and MongoDB.
 
 [![Build Status](https://travis-ci.org/Abigovor/live-chat.svg?branch=master)](https://travis-ci.org/Abigovor/live-chat)
 [![codecov.io](https://codecov.io/github/Abigovor/live-chat/coverage.svg?branch=master)](https://codecov.io/github/Abigovor/live-chat?branch=master)
-
+[![Heroku](https://heroku-badge.herokuapp.com/?app=safe-spire-29011&style=flat)](https://heroku-badge.herokuapp.com/?app=safe-spire-29011)
 
 ## Install the modules :
 
