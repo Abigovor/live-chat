@@ -18,11 +18,10 @@ function create(req, res) {
 	// create a new user called chris
 	var user = new User({name, username,password});
 
-	user.save(function(err) {
+	user.save(function(err, createUser) {
   		if (err) return res.sendStatus(500);
-
-  		console.log('User saved successfully!');
-  		res.sendStatus(200);
+  		
+  		res.send(createUser);
 	})
 }
 
