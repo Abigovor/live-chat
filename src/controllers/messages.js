@@ -19,13 +19,12 @@ function create(req, res) {
     let to = req.body.to; // user id to message
     let created_at = new Date();
 
-	var message = new Message({message, from, to, created_at});
+	var message = new Message({text, from, to, created_at});
 
-	message.save(function(err) {
+	message.save(function(err, createdMessage) {
   		if (err) return res.sendStatus(500);
 
-  		console.log('Message saved successfully!');
-  		res.sendStatus(200);
+  		res.send(createdMessage);
 	})
 }
 
