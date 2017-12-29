@@ -19,7 +19,11 @@ app
 .post('/user', modules.controllers.users.create)
 
 .get('/messages', modules.controllers.messages.all)
-.post('/message', modules.controllers.messages.create)
+.get('/message', modules.controllers.messages.create)
+
+.get('/rooms', modules.controllers.rooms.all)
+.get('/room', modules.controllers.rooms.create)
+
 
 
 db.connect()
